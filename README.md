@@ -2,7 +2,7 @@
 
 Submitted by: Aisha Beltagy
 
-This web app: **insert description**
+This web app:  This web app allows users to create and manage personalized crewmate profiles, featuring customizable attributes like name, speed, and color. Each crewmate has a unique link to their information page, providing easy access to detailed stats and visuals.
 
 Time spent: 7 hours spent in total
 
