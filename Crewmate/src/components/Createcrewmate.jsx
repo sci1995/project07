@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import createImage from './images/il_570xN.2769253056_5occ.webp'; // Adjust the path as necessary
+import createImage from './images/il_570xN.2769253056_5occ.webp'; 
 import { supabase } from '../client';
 
 function CreateCrewmate({ addCrewmate }) {

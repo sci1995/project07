@@ -37,6 +37,7 @@ function Gallery() {
           <Card key={crewmate.id} crewmate={crewmate} onEdit={handleEdit} />
         ))}
       </div>
+  
 
       {editingCrewmateId && (
         <EditCrewmate

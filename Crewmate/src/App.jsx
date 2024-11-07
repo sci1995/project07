@@ -1,25 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
 import Home from './components/Home';
 import CreateCrewmate from './components/Createcrewmate';
 import Gallery from './components/Gallery';
 import Sidebar from './components/Sidebar';
+import CrewmateInfo from './components/CrewmateInfo';
 
 function App() {
-  const [page, setPage] = useState('home');
   const [crewmates, setCrewmates] = useState([]);
-
   const addCrewmate = (crewmate) => {
     setCrewmates([...crewmates, crewmate]);
   };
 
   return (
     <div className="app">
-      <Sidebar setPage={setPage} />
+      <Sidebar  />
       <div className="main-content">
-        {page === 'home' && <Home />}
-        {page === 'create' && <CreateCrewmate addCrewmate={addCrewmate} />}
-        {page === 'gallery' && <Gallery crewmates={crewmates} />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<CreateCrewmate addCrewmate={addCrewmate} />} />
+          <Route path="/gallery" element={<Gallery crewmates={crewmates} />} />
+          <Route path="/crewmate/:id" element={<CrewmateInfo />} />
+        </Routes>
       </div>
     </div>
   );
